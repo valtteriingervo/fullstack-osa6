@@ -38,6 +38,7 @@ const reducer = (state = initialState, action) => {
   }
 }
 
+// Action creator functions below. Already present from a previous commit
 export const giveVote = (id) => {
   return {
     type: 'GIVE_VOTE',
