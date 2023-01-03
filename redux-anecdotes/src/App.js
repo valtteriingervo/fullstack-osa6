@@ -2,7 +2,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { giveVote, newAnecdote } from './reducers/anecdoteReducer'
 
 const App = () => {
-  const anecdotes = useSelector(state => state)
+  const compareAnecVotes = (anecA, anecB) => {
+    return anecA.votes - anecB.votes
+  }
+
+  // Have the anecdotes be in vote order from highest to lowest
+  const anecdotes = useSelector(state => state.sort(compareAnecVotes).reverse())
   const dispatch = useDispatch()
 
   const addAnecdote = (event) => {
@@ -11,6 +16,8 @@ const App = () => {
     event.target.anecdote.value = ''
     dispatch(newAnecdote(content))
   }
+
+
 
   return (
     <div>
