@@ -1,12 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux'
+import { giveVote } from './reducers/anecdoteReducer'
+
+/*
+6.3: anekdootit, step1
+Toteuta mahdollisuus anekdoottien äänestämiseen. Äänien määrä tulee tallettaa Redux-storeen.
+*/
 
 const App = () => {
   const anecdotes = useSelector(state => state)
   const dispatch = useDispatch()
-
-  const vote = (id) => {
-    console.log('vote', id)
-  }
 
   return (
     <div>
@@ -18,7 +20,8 @@ const App = () => {
           </div>
           <div>
             has {anecdote.votes}
-            <button onClick={() => vote(anecdote.id)}>vote</button>
+            <button
+              onClick={() => dispatch(giveVote(anecdote.id))}>vote</button>
           </div>
         </div>
       )}
