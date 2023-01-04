@@ -6,12 +6,12 @@ const AnecdoteList = () => {
     return anecA.votes - anecB.votes
   }
   // Have the anecdotes be in vote order from highest to lowest
-  const anecdotes = useSelector(state => state.sort(compareAnecVotes).reverse())
+  //const anecdotes = useSelector(state => state.anecdotes.sort(compareAnecVotes).reverse())
+  const anecdotes = useSelector(({ anecdotes }) => anecdotes.slice().sort(compareAnecVotes).reverse())
   const dispatch = useDispatch()
 
   return (
     <div>
-      <h2>Anecdotes</h2>
       {anecdotes.map(anecdote =>
         <div key={anecdote.id}>
           <div>
