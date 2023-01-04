@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import { newAnecdote } from '../reducers/anecdoteReducer'
-import { changeNotif } from '../reducers/notificationReducer'
+import { changeNotif, clearNotif } from '../reducers/notificationReducer'
 
 const AnecdoteForm = () => {
 
@@ -13,7 +13,8 @@ const AnecdoteForm = () => {
     dispatch(newAnecdote(content))
     // Change notif to the new anecdote added
     dispatch(changeNotif(content))
-
+    // After 5 seconds set the notif state to empty which hides it
+    setTimeout(() => dispatch(clearNotif()), 5000)
   }
 
   return (
