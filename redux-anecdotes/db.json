@@ -3,17 +3,17 @@
     {
       "content": "If it hurts, do it more often",
       "id": "47145",
-      "votes": 2
+      "votes": 9
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
       "id": "21149",
-      "votes": 1
+      "votes": 2
     },
     {
       "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
       "id": "69581",
-      "votes": 1
+      "votes": 2
     },
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
@@ -23,7 +23,7 @@
     {
       "content": "Premature optimization is the root of all evil.",
       "id": "25170",
-      "votes": 1
+      "votes": 5
     },
     {
       "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
@@ -32,38 +32,18 @@
     },
     {
       "content": "Cool beans make the dream",
-      "votes": 2,
+      "votes": 8,
       "id": "u6t06F1"
     },
     {
-      "content": "Once a tree, always a man",
-      "votes": 4,
-      "id": "g2Uvj-d"
+      "content": "Zesty lime is a good acid!",
+      "votes": 6,
+      "id": "GrFhuyM"
     },
     {
-      "content": "Cat goes meow",
-      "votes": 12,
-      "id": "HEXOn0x"
-    },
-    {
-      "content": "Oh my lordy lord",
-      "votes": 8,
-      "id": "5enetYH"
-    },
-    {
-      "content": "Async operations are cool!",
-      "votes": 5,
-      "id": "t09YKAW"
-    },
-    {
-      "content": "We just need some more show",
-      "votes": 7,
-      "id": "XXGooyv"
-    },
-    {
-      "content": "Damn son where'd you find this?",
-      "votes": 13,
-      "id": "iUXnIWg"
+      "content": "You cant build what you cant see",
+      "votes": 1,
+      "id": "5j8ToiX"
     }
   ]
 }
