@@ -10,6 +10,7 @@ const getAll = async () => {
 const createNew = async (content) => {
   const object = { content, votes: 0 }
   const response = await axios.post(baseUrl, object)
+  // Returns the whole anecdote object which we can directly push in the anecdoteReducer
   return response.data
 }
 

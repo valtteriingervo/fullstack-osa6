@@ -7,7 +7,7 @@ const notificationSlice = createSlice({
   initialState,
   reducers: {
     changeNotif(state, action) {
-      return `New anecdote added: '${action.payload}'`
+      return `New anecdote added: '${action.payload.content}'`
     },
     changeNotifForVote(state, action) {
       const voteNotif = `you voted '${action.payload}'`
