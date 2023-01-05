@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { giveVote } from '../reducers/anecdoteReducer'
+import { voteForAnecdote } from '../reducers/anecdoteReducer'
 import { changeNotifForVote, clearNotif } from '../reducers/notificationReducer'
 
 const AnecdoteList = () => {
@@ -18,11 +18,11 @@ const AnecdoteList = () => {
 
   const dispatch = useDispatch()
 
-  const voteForAnecdote = (id, content) => {
+  const giveVoteToAnecdote = (anecdote) => {
     // Give the vote changing the anecdotes list state by incrementing vote
-    dispatch(giveVote(id))
+    dispatch(voteForAnecdote(anecdote))
     // Changing the vote must also change the notification state
-    dispatch(changeNotifForVote(content))
+    dispatch(changeNotifForVote(anecdote.content))
     // After 5 seconds set the notif state to empty which hides it
     setTimeout(() => dispatch(clearNotif()), 5000)
   }
@@ -37,7 +37,7 @@ const AnecdoteList = () => {
           <div>
             has {anecdote.votes}
             <button
-              onClick={() => voteForAnecdote(anecdote.id, anecdote.content)}>vote</button>
+              onClick={() => giveVoteToAnecdote(anecdote)}>vote</button>
           </div>
         </div>
       )}
