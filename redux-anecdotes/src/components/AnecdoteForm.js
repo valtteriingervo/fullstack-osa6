@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { newAnecdote } from '../reducers/anecdoteReducer'
+import { createAnecdote } from '../reducers/anecdoteReducer'
 import { changeNotif, clearNotif } from '../reducers/notificationReducer'
-import anecdoteService from '../services/anecdotes'
 
 const AnecdoteForm = () => {
 
@@ -11,11 +10,9 @@ const AnecdoteForm = () => {
     event.preventDefault()
     const content = event.target.anecdote.value
     event.target.anecdote.value = ''
-    // Add the new note to Database
-    const addedAnecdote = await anecdoteService.createNew(content)
-    dispatch(newAnecdote(addedAnecdote))
+    dispatch(createAnecdote(content))
     // Change notif to the new anecdote added
-    dispatch(changeNotif(addedAnecdote))
+    dispatch(changeNotif(content))
     // After 5 seconds set the notif state to empty which hides it
     setTimeout(() => dispatch(clearNotif()), 5000)
   }
