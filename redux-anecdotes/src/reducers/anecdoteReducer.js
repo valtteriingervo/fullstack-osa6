@@ -44,8 +44,7 @@ export const createAnecdote = content => {
 export const voteForAnecdote = anecdoteObject => {
   return async dispatch => {
     await anecdoteService.changeVote(anecdoteObject)
-    const updatedAnecdotes = await anecdoteService.getAll()
-    dispatch(setAnecdotes(updatedAnecdotes))
+    dispatch(giveVote(anecdoteObject.id))
   }
 }
 
